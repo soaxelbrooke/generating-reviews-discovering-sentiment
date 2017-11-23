@@ -31,7 +31,7 @@ def load_sst(path):
     return X, Y
 
 
-def sst_binary(data_dir='data/'):
+def sst_binary(data_dir='../data/'):
     """
     Most standard models make use of a preprocessed/tokenized/lowercased version
     of Stanford Sentiment Treebank. Our model extracts features from a version
