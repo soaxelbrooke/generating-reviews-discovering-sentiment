@@ -2,6 +2,7 @@ import time
 import numpy as np
 import tensorflow as tf
 
+import os
 from tqdm import tqdm
 from sklearn.externals import joblib
 
@@ -133,7 +134,7 @@ class Model(object):
             embd_wn=True,
         )
         global params
-        params = [np.load('../model/%d.npy'%i) for i in range(15)]
+        params = [np.load(os.path.dirname(__file__) + '/../model/%d.npy'%i) for i in range(15)]
         params[2] = np.concatenate(params[2:6], axis=1)
         params[3:6] = []
 
