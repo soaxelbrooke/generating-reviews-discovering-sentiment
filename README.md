@@ -1,5 +1,22 @@
 # Generating Reviews and Discovering Sentiment
 
+# Installation
+
+```
+pip install git+https://github.com/soaxelbrooke/generating-reviews-discovering-sentiment.git@master
+```
+
+# Usage
+
+```
+from sentiment_neuron.sentiment_analyzer import SentimentAnalyzer
+
+analyzer = SentimentAnalyzer()
+print(analyzer.analyze(['This is how we do it.']))
+```
+
+# Old README
+
 Code for [Learning to Generate Reviews and Discovering Sentiment](https://arxiv.org/abs/1704.01444) (Alec Radford, Rafal Jozefowicz, Ilya Sutskever).
 
 Right now the code supports using the language model as a feature extractor.
