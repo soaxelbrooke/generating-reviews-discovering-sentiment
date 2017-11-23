@@ -6,5 +6,6 @@ setup(name='sentiment_neuron',
       version='0.0.1',
       packages=['sentiment_neuron'],
       install_requires=[],
+      package_data={'sentiment_neuron': ['model/*']},
       zip_safe=False)
 
