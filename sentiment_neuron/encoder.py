@@ -5,7 +5,7 @@ import tensorflow as tf
 from tqdm import tqdm
 from sklearn.externals import joblib
 
-from utils import HParams, preprocess, iter_data
+from sentiment_neuron.utils import HParams, preprocess, iter_data
 
 global nloaded
 nloaded = 0

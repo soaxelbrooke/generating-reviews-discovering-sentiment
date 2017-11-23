@@ -1,6 +1,6 @@
-from encoder import Model
+from sentiment_neuron.encoder import Model
 from matplotlib import pyplot as plt
-from utils import sst_binary, train_with_reg_cv
+from sentiment_neuron.utils import sst_binary, train_with_reg_cv
 
 model = Model()
 
