@@ -143,7 +143,13 @@ class Model(object):
         S = tf.placeholder(tf.float32, [hps.nstates, None, hps.nhidden])
         cells, states, logits = model(X, S, M, reuse=False)
 
-        sess = tf.Session()
+        mem_percent = float(os.environ.get('GPU_MEM_PERCENT', '1'))
+        if mem_percent != 1:
+            gpu_opts = tf.GPUOptions(per_process_gpu_memory_fraction=mem_percent)
+            sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_opts))
+        else:
+            sess = tf.Session()
+
         tf.global_variables_initializer().run(session=sess)
 
         def seq_rep(xmb, mmb, smb):
